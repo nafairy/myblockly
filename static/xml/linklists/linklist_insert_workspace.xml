@@ -1,0 +1,289 @@
+<!-- 2.定义xml文件 -->
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id="G,z`oc}bwSy+veFoOO*j">linklist</variable>
+        <variable id="=ZB}0_T2+s.:.^P:Z(WM">val</variable>
+        <variable id="B=7@[+]ktaS`3q``D|)$">position</variable>
+        <variable id="/~acIBc0|kyQ[[Y~q@)|">node</variable>
+        <variable id="/MyQ8yKAcKUoCV;BrCu`">curr</variable>
+        <variable id="^X0YfBv)sQ{YP3S#^y|3">index</variable>
+    </variables>
+    <block type="variables_set" id="PvK#UuP`i$IS@^;FT:gb" collapsed="true" x="1" y="10">
+        <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+        <value name="VALUE">
+            <block type="linkLists_create_with" id="]bT|1c!9f(oa7nVUaGv9">
+                <mutation items="5"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="OiNkKiYkd1:u*+PR[.h~">
+                        <field name="NUM">3</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="e.PFzutB/K#K:^26a4*c">
+                        <field name="NUM">4</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="}+Q4SN@*3vZ6I!/`6.uE">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="I:_~u9q[$e82b)[y-A;+">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="w5a|EHsbgl;dC.O}{L,*">
+                        <field name="NUM">7</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+            <block type="variables_set" id="a3)E3C5*LJl%8]3/jwbm">
+                <field name="VAR" id="=ZB}0_T2+s.:.^P:Z(WM">val</field>
+                <value name="VALUE">
+                    <block type="math_random_int" id="kH4sHU=0EUk{G=@3!O%|">
+                        <value name="FROM">
+                            <block type="math_number" id="zS_UbKy=KWww8O%7N[Mn">
+                                <field name="NUM">1</field>
+                            </block>
+                        </value>
+                        <value name="TO">
+                            <block type="math_number" id="2{fjlqsy_pp77ckZqzBN">
+                                <field name="NUM">10</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <next>
+                    <block type="variables_set" id="^JK|_UcbTdYF_UpRaR,g">
+                        <field name="VAR" id="B=7@[+]ktaS`3q``D|)$">position</field>
+                        <value name="VALUE">
+                            <block type="math_random_int" id="s+|g)Y]kfDe;.@xZ5QM*">
+                                <value name="FROM">
+                                    <shadow type="math_number" id="dM$axKEbfIJQKsF.({1i">
+                                        <field name="NUM">0</field>
+                                    </shadow>
+                                </value>
+                                <value name="TO">
+                                    <block type="linkLists_length" id="rywZp_V*(+?}7F)VgFkV">
+                                        <value name="VALUE">
+                                            <block type="variables_get" id="Gk6typ+u`S#Jv}4;8}.q">
+                                                <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="variables_set" id="y;n#T/hmON-rw=MJY*$X">
+                                <field name="VAR" id="/~acIBc0|kyQ[[Y~q@)|">node</field>
+                                <value name="VALUE">
+                                    <block type="linkLists_node" id="6=X2Lrd!De$5Y?]/wN-C" inline="true">
+                                        <value name="VALUE">
+                                            <block type="variables_get" id="zb`D0R;*QPf(1CvG13Eu">
+                                                <field name="VAR" id="=ZB}0_T2+s.:.^P:Z(WM">val</field>
+                                            </block>
+                                        </value>
+                                        <value name="NEXT">
+                                            <block type="logic_null" id=".qD8nKE%ur!%XIG5-uJ."></block>
+                                        </value>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="variables_set" id="v@2+V_./bM.1G:237G/n">
+                                        <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                        <value name="VALUE">
+                                            <block type="linkLists_getHead" id="a_5|UZ@oKzvn7y-}E18W">
+                                                <value name="VALUE">
+                                                    <block type="variables_get" id="rMF#isg2xEvAZbT@%+r*">
+                                                        <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <next>
+                                            <block type="controls_if" id="Z:]AMEmgwYbxavuFu@gt">
+                                                <mutation else="1"></mutation>
+                                                <value name="IF0">
+                                                    <block type="logic_compare" id="`x!2[(_$NSX|P?M4-,I$">
+                                                        <field name="OP">EQ</field>
+                                                        <value name="A">
+                                                            <block type="variables_get" id="35:N[%Q*pbu_t4dT2B;T">
+                                                                <field name="VAR" id="B=7@[+]ktaS`3q``D|)$">position</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="B">
+                                                            <block type="math_number" id="2Z*rI?jEH!fL9Bt33+;)">
+                                                                <field name="NUM">0</field>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                    <block type="linkLists_node_setNext" id="7HWkQb^7-ex*kB^Jn9T}">
+                                                        <value name="VALUE">
+                                                            <block type="variables_get" id="G8B_GuWTP3;=fVvez$fL">
+                                                                <field name="VAR" id="/~acIBc0|kyQ[[Y~q@)|">node</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="SET">
+                                                            <block type="variables_get" id="6$$`pJ9Suoxqh/%tQLD}">
+                                                                <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                                            </block>
+                                                        </value>
+                                                        <next>
+                                                            <block type="linkLists_setHead" id="KDqIjgn?RqlRox*@807U">
+                                                                <value name="VALUE">
+                                                                    <block type="variables_get" id="Sj56p=rAlTZd96!q*=_e">
+                                                                        <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+                                                                    </block>
+                                                                </value>
+                                                                <value name="SET">
+                                                                    <block type="variables_get" id="y_F[+W4Qhs1H5#4bw1.y">
+                                                                        <field name="VAR" id="/~acIBc0|kyQ[[Y~q@)|">node</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </statement>
+                                                <statement name="ELSE">
+                                                    <block type="variables_set" id="nZR},EChYWJEK+0/f0z4">
+                                                        <field name="VAR" id="^X0YfBv)sQ{YP3S#^y|3">index</field>
+                                                        <value name="VALUE">
+                                                            <block type="math_number" id="5H,nU.Rx$HC{/uY`dB*9">
+                                                                <field name="NUM">1</field>
+                                                            </block>
+                                                        </value>
+                                                        <next>
+                                                            <block type="controls_whileUntil" id="0#q?wKqbMu7l!=yz7C/*">
+                                                                <field name="MODE">WHILE</field>
+                                                                <value name="BOOL">
+                                                                    <block type="logic_compare" id="d[;u7y4u_##;D(Ej*e-Q">
+                                                                        <field name="OP">LT</field>
+                                                                        <value name="A">
+                                                                            <block type="variables_get" id="8b|az/4]dA5S9gQkmEkP">
+                                                                                <field name="VAR" id="^X0YfBv)sQ{YP3S#^y|3">index</field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                            <block type="variables_get" id="LJ4fVXF+`8Miq9a._pL^">
+                                                                                <field name="VAR" id="B=7@[+]ktaS`3q``D|)$">position</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                                <statement name="DO">
+                                                                    <block type="variables_set" id="p=P8NF5ztfnb^G0pRRX*">
+                                                                        <field name="VAR" id="^X0YfBv)sQ{YP3S#^y|3">index</field>
+                                                                        <value name="VALUE">
+                                                                            <block type="math_arithmetic" id="}vK;Q3]P-}%%9V48fZ#R">
+                                                                                <field name="OP">ADD</field>
+                                                                                <value name="A">
+                                                                                    <block type="variables_get" id="M-({DGz4g-Lr#}LCCE[!">
+                                                                                        <field name="VAR" id="^X0YfBv)sQ{YP3S#^y|3">index</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <value name="B">
+                                                                                    <shadow type="math_number" id="~02j|qP{Ge5(G?)JQTWg">
+                                                                                        <field name="NUM">1</field>
+                                                                                    </shadow>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                        <next>
+                                                                            <block type="variables_set" id="*a7!{J{o0G3f|OU#E3En">
+                                                                                <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                                                                <value name="VALUE">
+                                                                                    <block type="linkLists_node_next" id="d52Cs?*2ldkVxhbnfP0s">
+                                                                                        <value name="VALUE">
+                                                                                            <block type="variables_get" id="Py1GqBZA!p`kcPto*z[M">
+                                                                                                <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </statement>
+                                                                <next>
+                                                                    <block type="linkLists_node_setNext" id="[+ZaH3J71{akwj3D4t,]">
+                                                                        <value name="VALUE">
+                                                                            <block type="variables_get" id="vt]8TMw*3bf8m!vJQ}5u">
+                                                                                <field name="VAR" id="/~acIBc0|kyQ[[Y~q@)|">node</field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="SET">
+                                                                            <block type="linkLists_node_next" id="MgvgT?fnwM`1VI5Yt-zb">
+                                                                                <value name="VALUE">
+                                                                                    <block type="variables_get" id="c@@SYh0[9`Po^6TNI-#@">
+                                                                                        <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                        <next>
+                                                                            <block type="linkLists_node_setNext" id="2JTlTDv]4I;xk1W19DW/">
+                                                                                <value name="VALUE">
+                                                                                    <block type="variables_get" id="QaMNO}tISs])b$AMM(~9">
+                                                                                        <field name="VAR" id="/MyQ8yKAcKUoCV;BrCu`">curr</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <value name="SET">
+                                                                                    <block type="variables_get" id="i0sq0T+~?Y|(r-I=YuLK">
+                                                                                        <field name="VAR" id="/~acIBc0|kyQ[[Y~q@)|">node</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </next>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </statement>
+                                                <next>
+                                                    <block type="linkLists_setLength" id="xPal5w)e^[Ns-(p|Bz|*">
+                                                        <value name="VALUE">
+                                                            <block type="variables_get" id="A02R@q8?p^^`%igVvpcH">
+                                                                <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="SET">
+                                                            <block type="math_number" id="{6rzIiu([[rg/(J~@X6L">
+                                                                <field name="NUM">1</field>
+                                                            </block>
+                                                        </value>
+                                                        <next>
+                                                            <block type="text_print" id="fh-dQa]nH~AK^us#|muZ">
+                                                                <value name="TEXT">
+                                                                    <block type="linkLists_print_linklist" id="LR8)sJ9A.SPTw)4GmYqb">
+                                                                        <value name="VALUE">
+                                                                            <block type="variables_get" id="N;Nv#;Umj~+wb$vK:@J2">
+                                                                                <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

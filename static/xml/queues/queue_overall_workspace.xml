@@ -1,0 +1,165 @@
+<!-- 2.定义xml文件 -->
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id=":,r,j(Y5ft9MmjLvQXjv">arr</variable>
+        <variable id="I.QSh|0[:hsjNr;[P|4q">index</variable>
+    </variables>
+    <block type="variables_set" id="n5VX%$_.)5ig$WzL2o#r" collapsed="true" x="1" y="10">
+        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+        <value name="VALUE">
+            <block type="queues_create_with" id="aug_cj__p$^*Q!TDJU@?">
+                <mutation items="8"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="w`Cj`7n.R:0L%)l%K5=%">
+                        <field name="NUM">3</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="FcGy[JhW`82!kyCs3%)-">
+                        <field name="NUM">44</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="pMllbs5u|%cDKoY*@*u4">
+                        <field name="NUM">38</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="Qz0JtBvGd,`U*D4d|fRO">
+                        <field name="NUM">5</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="1H!*vLthg/sFJLMLT}X{">
+                        <field name="NUM">47</field>
+                    </block>
+                </value>
+                <value name="ADD5">
+                    <block type="math_number" id="da7kG6}K[ZjACcrpdx]~">
+                        <field name="NUM">15</field>
+                    </block>
+                </value>
+                <value name="ADD6">
+                    <block type="math_number" id="gr-Gvyzwwe6TZIe/Y=L]">
+                        <field name="NUM">38</field>
+                    </block>
+                </value>
+                <value name="ADD7">
+                    <block type="math_number" id="Xik!?#XN5CtxYyR[wV|4">
+                        <field name="NUM">16</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+            <block type="controls_whileUntil" id="i/:MUc*Zz{lY:3cl9vNP">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                    <block type="logic_compare" id="%/g`X4(5Kpuh)he6a%T$">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                            <block type="queues_length" id="xVXcE7K.AWvjN+S^tau8">
+                                <value name="VALUE">
+                                    <block type="variables_get" id="F}HVm}0Ewr4lP!BT}Q?3">
+                                        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <value name="B">
+                            <block type="math_number" id="syk7l;vJ[,QARgjD_Y#)">
+                                <field name="NUM">0</field>
+                            </block>
+                        </value>
+                    </block>
+                </value>
+                <statement name="DO">
+                    <block type="queues_pop" id="HJ3luknKq-JdB4y[f3h+">
+                        <value name="VALUE">
+                            <block type="variables_get" id="RS]obLGrd!C4~X9BCw]5">
+                                <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+                            </block>
+                        </value>
+                    </block>
+                </statement>
+                <next>
+                    <block type="controls_for" id="`yCSN`HJcHorbAl,T{=M">
+                        <field name="VAR" id="I.QSh|0[:hsjNr;[P|4q">index</field>
+                        <value name="FROM">
+                            <shadow type="math_number" id="xE09x0-y!5T{9PO=t*``">
+                                <field name="NUM">0</field>
+                            </shadow>
+                        </value>
+                        <value name="TO">
+                            <shadow type="math_number" id="vnrcuJYe47j9,*a?QOuw">
+                                <field name="NUM">7</field>
+                            </shadow>
+                        </value>
+                        <value name="BY">
+                            <shadow type="math_number" id="Mm()F,NvE3*H^)7}YvG$">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <statement name="DO">
+                            <block type="queues_push" id="Qj9-[!xU;/8ZQ-{W3b-n" inline="true">
+                                <value name="VALUE">
+                                    <block type="variables_get" id="awLfSWVXm[5n-TFoCfsf">
+                                        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+                                    </block>
+                                </value>
+                                <value name="TO">
+                                    <block type="math_random_int" id="{e2T*zChJ1GU,@rn4%j#">
+                                        <value name="FROM">
+                                            <shadow type="math_number" id="#La2nWHMtPEPM/Cq$k[1">
+                                                <field name="NUM">1</field>
+                                            </shadow>
+                                        </value>
+                                        <value name="TO">
+                                            <shadow type="math_number" id="*_6YkPM^*w:G@Ph.n`^3">
+                                                <field name="NUM">100</field>
+                                            </shadow>
+                                        </value>
+                                    </block>
+                                </value>
+                            </block>
+                        </statement>
+                        <next>
+                            <block type="controls_whileUntil" id="taM$craw$vd13oC;wpkt">
+                                <field name="MODE">WHILE</field>
+                                <value name="BOOL">
+                                    <block type="logic_compare" id="RzmkcFMm)1!0WYmr_V9[">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                            <block type="queues_length" id="MuWaQoFgMDBTXd|VYZh2">
+                                                <value name="VALUE">
+                                                    <block type="variables_get" id=";!vkaM(-l.8EF-YM(kx!">
+                                                        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <value name="B">
+                                            <block type="math_number" id="j0B|(kP,u$vf@HTflAu*">
+                                                <field name="NUM">0</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                                <statement name="DO">
+                                    <block type="queues_pop" id="es#*1X/p9v(|:F@ev=.G">
+                                        <value name="VALUE">
+                                            <block type="variables_get" id="9@[f[fUD;(WPCX9~-39m">
+                                                <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </statement>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

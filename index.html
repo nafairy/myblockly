@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Blockly可视化编程</title>
+  <!-- 引入样式 -->
+  <link href="https://cdn.bootcss.com/element-ui/2.8.2/theme-chalk/index.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/ustc_logo.ico">
+
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/element-ui/2.8.2/index.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+<!--  <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>-->
+<!--  <script src="https://cdn.bootcss.com/axios/0.17.0/axios.min.js"></script>-->
+  <script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.min.js"></script>
+<!--  <script src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts.common.min.js"></script>-->
+
+  <script src="static/blockly/blockly_compressed.js"></script>
+  <script src="static/blockly/blocks_compressed.js"></script>
+  <!-- 引入category的汉字js文件 -->
+  <script src="static/blockly/zh-hans.js"></script>
+  <!-- 引入将blocks解析为javascript的js文件 -->
+  <script src="static/blockly/javascript_compressed.js"></script>
+  <!-- 导入自定义的blocks,以及解析的js文件 -->
+  <script src="static/blocks/stacks.js"></script>
+  <script src="static/generators/stacks.js"></script>
+  <script src="static/blocks/queues.js"></script>
+  <script src="static/generators/queues.js"></script>
+  <script src="static/blocks/linklists.js"></script>
+  <script src="static/generators/linklists.js"></script>
+  <script src="static/blocks/trees.js"></script>
+  <script src="static/generators/trees.js"></script>
+  <script src="static/blocks/sets.js"></script>
+  <script src="static/generators/sets.js"></script>
+  <!-- 导入解释器和Echart-->
+  <!--  <script src="static/common/echarts.min.js"></script>-->
+  <script src="static/common/acorn_interpreter.js"></script>
+  <script src="static/visual_programming/base/ustc_vp_baseLib.js"></script>
+  <!--  高亮js-->
+ <!-- <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"></script>-->
+  <!--  加载算法对应的库-->
+  <script src="static/visual_programming/array/ustc_vp_array_insert.js"></script>
+  <script src="static/visual_programming/array/ustc_vp_array_delete.js"></script>
+  <script src="static/visual_programming/sort/ustc_vp_quick_sort.js"></script>
+  <script src="static/visual_programming/sort/ustc_vp_bubble_sort.js"></script>
+  <script src="static/visual_programming/sort/ustc_vp_insert_sort.js"></script>
+  <script src="static/visual_programming/sort/ustc_vp_select_sort.js"></script>
+  <script src="static/visual_programming/stack/ustc_vp_stack_push.js"></script>
+  <script src="static/visual_programming/stack/ustc_vp_stack_pop.js"></script>
+  <script src="static/visual_programming/stack/ustc_vp_stack_overall.js"></script>
+  <script src="static/visual_programming/queue/ustc_vp_queue_overall.js"></script>
+  <script src="static/visual_programming/queue/ustc_vp_queue_push.js"></script>
+  <script src="static/visual_programming/queue/ustc_vp_queue_pop.js"></script>
+  <script src="static/visual_programming/linklist/ustc_vp_linklist_insert.js"></script>
+  <script src="static/visual_programming/linklist/ustc_vp_linklist_delete.js"></script>
+  <script src="static/visual_programming/linklist/ustc_vp_linklist_search.js"></script>
+  <script src="static/visual_programming/tree/ustc_vp_tree_bfs.js"></script>
+  <script src="static/visual_programming/tree/ustc_vp_tree_preorder.js"></script>
+  <script src="static/visual_programming/tree/ustc_vp_tree_posorder.js"></script>
+  <script src="static/visual_programming/tree/ustc_vp_tree_inorder.js"></script>
+
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

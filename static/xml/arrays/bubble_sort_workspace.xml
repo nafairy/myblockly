@@ -1,0 +1,336 @@
+<!-- 2.定义xml文件 -->
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id=";2wc`PZzC2mli(nYe_*U">arr</variable>
+        <variable id="G2%S3wSW];+:#j={5TaQ">arr_len</variable>
+        <variable id="P_9n#4O6(+@I[aZ)7Z(u">flag</variable>
+        <variable id="ny,j^sI)kYq=(I@O3,-,">indexnow</variable>
+        <variable id=":ssd+MJaE;jcxs4#Of~w">indexnext</variable>
+        <variable id="i`xGHe)!G$`|+C;/5F/?">temp1</variable>
+        <variable id="8UNjsR?f|TP-VUP$pF=U">temp2</variable>
+    </variables>
+    <block type="variables_set" id="V~#abn~]ih4A1+,JZ-ko" collapsed="true" deletable="false" movable="false" x="1" y="10">
+        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+        <value name="VALUE">
+            <block type="lists_create_with" id="8a,~M!72~:.=i)?]Ktmk" deletable="false" movable="false">
+                <mutation items="15"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="VGNNy8SZ-D:nx+wP:e+?" deletable="false" movable="false">
+                        <field name="NUM">100</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="l4vLTKc#R9Ga7yl!.DN." deletable="false" movable="false">
+                        <field name="NUM">44</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="%A^N$ZQeE:s.%!L+4wp=" deletable="false" movable="false">
+                        <field name="NUM">38</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="Cacb[=G*qqIqG$`yr2bc" deletable="false" movable="false">
+                        <field name="NUM">5</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="*Zu80I_dKkCQ2`.Rq]6{" deletable="false" movable="false">
+                        <field name="NUM">47</field>
+                    </block>
+                </value>
+                <value name="ADD5">
+                    <block type="math_number" id="i(MDwB1]R2S[%81*H+sT" deletable="false" movable="false">
+                        <field name="NUM">15</field>
+                    </block>
+                </value>
+                <value name="ADD6">
+                    <block type="math_number" id="5uN54aTR]Df+Hw[3]y+9" deletable="false" movable="false">
+                        <field name="NUM">36</field>
+                    </block>
+                </value>
+                <value name="ADD7">
+                    <block type="math_number" id="*t=s5J}/xm!y:S{ALDnu" deletable="false" movable="false">
+                        <field name="NUM">26</field>
+                    </block>
+                </value>
+                <value name="ADD8">
+                    <block type="math_number" id="rHdr,Z|3(;Vh|ZMrcySD" deletable="false" movable="false">
+                        <field name="NUM">27</field>
+                    </block>
+                </value>
+                <value name="ADD9">
+                    <block type="math_number" id=";5ee*27p~VVpq^@`^$Rm" deletable="false" movable="false">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
+                <value name="ADD10">
+                    <block type="math_number" id="C;IpsAZEdTyhb2T*XoNd" deletable="false" movable="false">
+                        <field name="NUM">46</field>
+                    </block>
+                </value>
+                <value name="ADD11">
+                    <block type="math_number" id="%k9)F)0*Ju(.pT3Aq#{c" deletable="false" movable="false">
+                        <field name="NUM">4</field>
+                    </block>
+                </value>
+                <value name="ADD12">
+                    <block type="math_number" id="7paL0};+1/vOGs,$H-[M" deletable="false" movable="false">
+                        <field name="NUM">19</field>
+                    </block>
+                </value>
+                <value name="ADD13">
+                    <block type="math_number" id="`(N1l#iM;2W01)f5auTX" deletable="false" movable="false">
+                        <field name="NUM">50</field>
+                    </block>
+                </value>
+                <value name="ADD14">
+                    <block type="math_number" id="Y%.!8_WP1S}[^Gax@DEV" deletable="false" movable="false">
+                        <field name="NUM">48</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+            <block type="text_print" id="/!Lzgx:/G]-!%p`CIJe+" deletable="false" movable="false">
+                <value name="TEXT">
+                    <block type="variables_get" id="n9qF-np6GD!}LsDPxrq@" deletable="false" movable="false">
+                        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="variables_set" id="leJ*ZVQ%W%#|?22=Xnm@" deletable="false" movable="false">
+                        <field name="VAR" id="G2%S3wSW];+:#j={5TaQ">arr_len</field>
+                        <value name="VALUE">
+                            <block type="lists_length" id="6Qy/./{;ncuBUy%O9uya" deletable="false" movable="false">
+                                <value name="VALUE">
+                                    <block type="variables_get" id="8hf3XEC_,^AX{D@O*=O@" deletable="false" movable="false">
+                                        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="variables_set" id="9%v_CYj8j#+ZwKiAhyM}" deletable="false" movable="false">
+                                <field name="VAR" id="P_9n#4O6(+@I[aZ)7Z(u">flag</field>
+                                <value name="VALUE">
+                                    <block type="logic_boolean" id="Qf^G/SZ5@6])c*zha,M)" deletable="false" movable="false">
+                                        <field name="BOOL">TRUE</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="controls_whileUntil" id="dsHjpU!{{}qH(xcqKN1P" deletable="false" movable="false">
+                                        <field name="MODE">WHILE</field>
+                                        <value name="BOOL">
+                                            <block type="variables_get" id="e#+hoh,oYEO*!(yGkSAy" deletable="false" movable="false">
+                                                <field name="VAR" id="P_9n#4O6(+@I[aZ)7Z(u">flag</field>
+                                            </block>
+                                        </value>
+                                        <statement name="DO">
+                                            <block type="variables_set" id="+M3@0rm@]tsBLfF0,FvN" deletable="false" movable="false">
+                                                <field name="VAR" id="P_9n#4O6(+@I[aZ)7Z(u">flag</field>
+                                                <value name="VALUE">
+                                                    <block type="logic_boolean" id="@nFDT?Vt^!Zj1:]4Jw0n" deletable="false" movable="false">
+                                                        <field name="BOOL">FALSE</field>
+                                                    </block>
+                                                </value>
+                                                <next>
+                                                    <block type="controls_for" id="f+Nz=`^j|%AoLm@FS`H," deletable="false" movable="false">
+                                                        <field name="VAR" id="ny,j^sI)kYq=(I@O3,-,">indexnow</field>
+                                                        <value name="FROM">
+                                                            <block type="math_number" id="{e2/5q4d;*dPc1#s$KRM" deletable="false" movable="false">
+                                                                <field name="NUM">1</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="TO">
+                                                            <block type="variables_get" id="UrrQm_:h)[9y9@r6rza}" deletable="false" movable="false">
+                                                                <field name="VAR" id="G2%S3wSW];+:#j={5TaQ">arr_len</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="BY">
+                                                            <block type="math_number" id="PAV)*MP52QG0B!R~8B8t" deletable="false" movable="false">
+                                                                <field name="NUM">1</field>
+                                                            </block>
+                                                        </value>
+                                                        <statement name="DO">
+                                                            <block type="variables_set" id="Tf@|TN_6=473Q3U=nk3c" deletable="false" movable="false">
+                                                                <field name="VAR" id=":ssd+MJaE;jcxs4#Of~w">indexnext</field>
+                                                                <value name="VALUE">
+                                                                    <block type="math_arithmetic" id="Ubqde3}HB;ru+y5zlAi." deletable="false" movable="false">
+                                                                        <field name="OP">ADD</field>
+                                                                        <value name="A">
+                                                                            <block type="variables_get" id="5:F-W4B9LI0LFzNSS=o+" deletable="false" movable="false">
+                                                                                <field name="VAR" id="ny,j^sI)kYq=(I@O3,-,">indexnow</field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                            <block type="math_number" id="@(jdw#KQ5zm{grzHu4:#" deletable="false" movable="false">
+                                                                                <field name="NUM">1</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                                <next>
+                                                                    <block type="variables_set" id="%-u:-~c=71WvU0kQ,|lj" deletable="false" movable="false">
+                                                                        <field name="VAR" id="i`xGHe)!G$`|+C;/5F/?">temp1</field>
+                                                                        <value name="VALUE">
+                                                                            <block type="lists_getIndex" id="RkHK-8,Q;2G4_e~_r++d" deletable="false" movable="false">
+                                                                                <mutation statement="false" at="true"></mutation>
+                                                                                <field name="MODE">GET</field>
+                                                                                <field name="WHERE">FROM_START</field>
+                                                                                <value name="VALUE">
+                                                                                    <block type="variables_get" id="Yp,~7HHag9ja{!5bIY=0" deletable="false" movable="false">
+                                                                                        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <value name="AT">
+                                                                                    <block type="variables_get" id="3f}K_gaS(:5@7ttQpE2F" deletable="false" movable="false">
+                                                                                        <field name="VAR" id="ny,j^sI)kYq=(I@O3,-,">indexnow</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                        <next>
+                                                                            <block type="variables_set" id="1(iN}s@[r`Lw3%?mPT=9" deletable="false" movable="false">
+                                                                                <field name="VAR" id="8UNjsR?f|TP-VUP$pF=U">temp2</field>
+                                                                                <value name="VALUE">
+                                                                                    <block type="lists_getIndex" id="kVePg!/0UZ3O%!G{Wn=S" deletable="false" movable="false">
+                                                                                        <mutation statement="false" at="true"></mutation>
+                                                                                        <field name="MODE">GET</field>
+                                                                                        <field name="WHERE">FROM_START</field>
+                                                                                        <value name="VALUE">
+                                                                                            <block type="variables_get" id="X,W8r[c,!apCc}-Rch8~" deletable="false" movable="false">
+                                                                                                <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                        <value name="AT">
+                                                                                            <block type="variables_get" id="AcZ7wK*s]e?{(K16L{gO" deletable="false" movable="false">
+                                                                                                <field name="VAR" id=":ssd+MJaE;jcxs4#Of~w">indexnext</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                    <block type="controls_if" id="a{@zPTw~{Fmp#}yltCb$" deletable="false" movable="false">
+                                                                                        <value name="IF0">
+                                                                                            <block type="logic_compare" id="hQUk{]0kF(KM$;d_};#5" deletable="false" movable="false">
+                                                                                                <field name="OP">GT</field>
+                                                                                                <value name="A">
+                                                                                                    <block type="variables_get" id="PxV{F*]SyQN0:D}AV=:D" deletable="false" movable="false">
+                                                                                                        <field name="VAR" id="i`xGHe)!G$`|+C;/5F/?">temp1</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <value name="B">
+                                                                                                    <block type="variables_get" id="LzYL~Ja8%Wapa-c{m|K2" deletable="false" movable="false">
+                                                                                                        <field name="VAR" id="8UNjsR?f|TP-VUP$pF=U">temp2</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                        <statement name="DO0">
+                                                                                            <block type="lists_setIndex" id="aAkn$VY]H3JG_Eq/+O97" deletable="false" movable="false">
+                                                                                                <mutation at="true"></mutation>
+                                                                                                <field name="MODE">SET</field>
+                                                                                                <field name="WHERE">FROM_START</field>
+                                                                                                <value name="LIST">
+                                                                                                    <block type="variables_get" id="fXrX9HB3wCTKgLhYh0$D" deletable="false" movable="false">
+                                                                                                        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <value name="AT">
+                                                                                                    <block type="variables_get" id="U@N=c.R#Dr3^x~4}_g.k" deletable="false" movable="false">
+                                                                                                        <field name="VAR" id="ny,j^sI)kYq=(I@O3,-,">indexnow</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <value name="TO">
+                                                                                                    <block type="variables_get" id="%`Sv![]c!d{TwhBMy;Kc" deletable="false" movable="false">
+                                                                                                        <field name="VAR" id="8UNjsR?f|TP-VUP$pF=U">temp2</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                    <block type="lists_setIndex" id="Ouf$S_/AP,b%~:2AcaT:" deletable="false" movable="false">
+                                                                                                        <mutation at="true"></mutation>
+                                                                                                        <field name="MODE">SET</field>
+                                                                                                        <field name="WHERE">FROM_START</field>
+                                                                                                        <value name="LIST">
+                                                                                                            <block type="variables_get" id="J2TeLgtCZr[C_bv(]Kob" deletable="false" movable="false">
+                                                                                                                <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                                                                                            </block>
+                                                                                                        </value>
+                                                                                                        <value name="AT">
+                                                                                                            <block type="variables_get" id="9suy~D[NZz8oNIcjB|8l" deletable="false" movable="false">
+                                                                                                                <field name="VAR" id=":ssd+MJaE;jcxs4#Of~w">indexnext</field>
+                                                                                                            </block>
+                                                                                                        </value>
+                                                                                                        <value name="TO">
+                                                                                                            <block type="variables_get" id="rVr]..,Gc%_QrFta@`G6" deletable="false" movable="false">
+                                                                                                                <field name="VAR" id="i`xGHe)!G$`|+C;/5F/?">temp1</field>
+                                                                                                            </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                            <block type="variables_set" id="Y8Pp@XqA%NvS1kQUmMjy" deletable="false" movable="false">
+                                                                                                                <field name="VAR" id="P_9n#4O6(+@I[aZ)7Z(u">flag</field>
+                                                                                                                <value name="VALUE">
+                                                                                                                    <block type="logic_boolean" id="e~|7ynGS6!17-Z*`evY}" deletable="false" movable="false">
+                                                                                                                        <field name="BOOL">TRUE</field>
+                                                                                                                    </block>
+                                                                                                                </value>
+                                                                                                            </block>
+                                                                                                        </next>
+                                                                                                    </block>
+                                                                                                </next>
+                                                                                            </block>
+                                                                                        </statement>
+                                                                                    </block>
+                                                                                </next>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </next>
+                                                            </block>
+                                                        </statement>
+                                                        <next>
+                                                            <block type="variables_set" id="s-NaK6!T_UZg7|nK1Qlw" deletable="false" movable="false">
+                                                                <field name="VAR" id="G2%S3wSW];+:#j={5TaQ">arr_len</field>
+                                                                <value name="VALUE">
+                                                                    <block type="math_arithmetic" id="#wB`W9CG/g|acInSLV*z" deletable="false" movable="false">
+                                                                        <field name="OP">MINUS</field>
+                                                                        <value name="A">
+                                                                            <block type="variables_get" id="an9v#/(9,{fhry?Ah5yL" deletable="false" movable="false">
+                                                                                <field name="VAR" id="G2%S3wSW];+:#j={5TaQ">arr_len</field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="B">
+                                                                            <block type="math_number" id=",~Hb^fUehP{zCuXcV;d(" deletable="false" movable="false">
+                                                                                <field name="NUM">1</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </statement>
+                                        <next>
+                                            <block type="text_print" id="r.JoF{ML-MEP%d%vOV?s" deletable="false" movable="false">
+                                                <value name="TEXT">
+                                                    <block type="variables_get" id="y:aL4h:ettDk-,qi6wc5" deletable="false" movable="false">
+                                                        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+
+</xml>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="787459f6-5578-4ecc-b399-513ab519a682" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../course1" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1kGvY8wSEYsR4LC61A2XR5tMO6F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="787459f6-5578-4ecc-b399-513ab519a682" name="Default Changelist" comment="" />
+      <created>1605339787442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605339787442</updated>
+      <workItem from="1605339788481" duration="609000" />
+      <workItem from="1605706297577" duration="2340000" />
+      <workItem from="1605784764840" duration="5000" />
+      <workItem from="1605853984521" duration="1241000" />
+      <workItem from="1606048942458" duration="21000" />
+      <workItem from="1606898221012" duration="675000" />
+      <workItem from="1606900250393" duration="1493000" />
+      <workItem from="1607415732699" duration="1000" />
+      <workItem from="1607843092044" duration="50000" />
+      <workItem from="1608039011830" duration="8472000" />
+      <workItem from="1608048681390" duration="123000" />
+      <workItem from="1608803277388" duration="13000" />
+      <workItem from="1613232118377" duration="1300000" />
+      <workItem from="1613324440378" duration="439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="626" y="237" key="FileChooserDialogImpl" timestamp="1608042815124">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="626" y="237" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608042815124" />
+    <state width="1316" height="199" key="GridCell.Tab.0.bottom" timestamp="1605708703696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1316" height="199" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605708703696" />
+    <state width="1316" height="199" key="GridCell.Tab.0.center" timestamp="1605708703696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1316" height="199" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605708703696" />
+    <state width="1316" height="199" key="GridCell.Tab.0.left" timestamp="1605708703696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1316" height="199" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605708703696" />
+    <state width="1316" height="199" key="GridCell.Tab.0.right" timestamp="1605708703696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1316" height="199" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605708703696" />
+    <state x="266" y="74" key="SettingsEditor" timestamp="1606900405589">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="266" y="74" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606900405589" />
+    <state x="417" y="196" key="run.anything.popup" timestamp="1608042028327">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="417" y="196" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1608042028327" />
+  </component>
+</project>
