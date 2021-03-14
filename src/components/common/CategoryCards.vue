@@ -134,7 +134,7 @@
                 difficulty: "easy",
                 imgUrl: require('../../assets/c7.gif'),
                 createdTime: '2020.1.30',
-                title: "括号匹配"
+                title: "括号匹配Ⅰ"
               },
               {
                 id: 2,
@@ -142,7 +142,7 @@
                 difficulty: "easy",
                 imgUrl: require('../../assets/c8.gif'),
                 createdTime: '2020.1.31',
-                title: "入栈"
+                title: "括号匹配Ⅱ"
               },
               {
                 id: 3,
@@ -150,7 +150,7 @@
                 difficulty: "hard",
                 imgUrl: require('../../assets/c9.gif'),
                 createdTime: '2020.1.32',
-                title: '栈综合算法'
+                title: '四则运算'
               }
             ]
           },

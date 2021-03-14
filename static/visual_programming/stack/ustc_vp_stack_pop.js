@@ -72,7 +72,9 @@ StackPopChart.getArrInitData = function(codeStr){
 
         let dateList = arr.split("[")[1].split("]")[0].split(",");
         for(let num in dateList){
-            StackPopChart.initData.push(parseInt(dateList[num]));
+            if(isNaN(dateList[num])){
+                StackPopChart.initData.push(parseInt(dateList[num]));
+            }
         }
 
         ustc_vp.utils.sourceToDest(StackPopChart.initData,StackPopChart.arrNow);
@@ -310,11 +312,11 @@ StackPopBlockly.initBlockly = function (blocklyDiv, mediaLocation,workspaceXML) 
         // collapse: true,
         // comments: false,
         // disable: true,
-        // maxBlocks: Infinity,
+        maxBlocks: Infinity,
         // trashcan: false,
         // horizontalLayout: false,
         toolboxPosition: 'start',
-        // css: true,
+        css: true,
         media: mediaLocation
         // rtl: false,
         // scrollbars: true,
@@ -382,8 +384,8 @@ StackPopBlockly.generateAddCodeToString = function (customizeApi) {
 }
 /* 生成并解析代码 */
 StackPopBlockly.generateCodeAndLoadIntoInterpreter = function (addCode, workspace) {
-    // Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode + "alert(arr);\n";
     Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+    Blockly.JavaScript.STATEMENT_SUFFIX = addCode;
     // 确保函数名和变量名不会冲突（自定义的API可加可不加）
     Blockly.JavaScript.addReservedWords('highlightBlock');
     StackPopBlockly.latestCode = Blockly.JavaScript.workspaceToCode(workspace);
@@ -528,8 +530,11 @@ var StackPopExecute = {};
 StackPopExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
 
     let workspaceXML = StackPopBlockly.getWorkspaceXML(XMLpath);
+    let initworkspaceXML=StackPopBlockly.getWorkspaceXML("static/xml/stacks/stack_pop_init_workspace.xml");
     // 定义Blockly工作空间
     StackPopBlockly.workspace = StackPopBlockly.initBlockly(blocklyDiv, mediaPath,workspaceXML);
+    Blockly.Xml.domToWorkspace(initworkspaceXML, StackPopBlockly.workspace);
+
     return StackPopBlockly.workspace;
     // 通过xml文件路径获取xml对象
     // let workspaceXML = StackPopBlockly.getWorkspaceXML(XMLpath);

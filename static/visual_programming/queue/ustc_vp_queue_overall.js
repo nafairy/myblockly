@@ -47,7 +47,7 @@ QueueOverAllChart.dataClear = function () {
     QueueOverAllChart.queueObjectArr = [];
 
     QueueOverAllChart.changeChart = null;   //(函数)图表改变时的执行函数
-    QueueOverAllChart.queueDataChangeIndex = [-1];  //图表改变时记录变化索引 
+    QueueOverAllChart.queueDataChangeIndex = [-1];  //图表改变时记录变化索引
 }
 /* 获取图表初始化的数据 */
 QueueOverAllChart.getArrInitData = function (codeStr) {
@@ -74,7 +74,9 @@ QueueOverAllChart.getArrInitData = function (codeStr) {
 
         let dateList = arr.split("[")[1].split("]")[0].split(",");
         for (let num in dateList) {
-            QueueOverAllChart.initData.push(parseInt(dateList[num]));
+            if(isNaN(dateList[num])){
+                QueueOverAllChart.initData.push(parseInt(dateList[num]));
+            }
         }
 
         ustc_vp.utils.sourceToDest(QueueOverAllChart.initData, QueueOverAllChart.arrNow);
@@ -150,7 +152,7 @@ QueueOverAllChart.setQueueChartOption = function (chart, data, dataChangeIndex, 
     chart.setOption({
         title: {
             text: chartAttr.chartTitle,
-            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入队" : (dataChangeIndex[0] == 2 ? "出队" : "")), //副标题 
+            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入队" : (dataChangeIndex[0] == 2 ? "出队" : "")), //副标题
             subtextStyle: {//主标题的属性
                 color: 'blue',//颜色
                 fontWeight: 'bold',
@@ -191,7 +193,7 @@ QueueOverAllChart.setQueueChartOption = function (chart, data, dataChangeIndex, 
 }
 
 /* 改变队列图表数据和样式：
-QueueOverAllChart.changeChart(QueueOverAllBlockly.hasMoreCode, QueueOverAllChart.showChart, QueueOverAllChart.arrNow, QueueOverAllChart.dataChangeIndex); 
+QueueOverAllChart.changeChart(QueueOverAllBlockly.hasMoreCode, QueueOverAllChart.showChart, QueueOverAllChart.arrNow, QueueOverAllChart.dataChangeIndex);
 */
 QueueOverAllChart.queueChangeChart = function (hasMoreCode, chart, data, dataChangeIndex) {
 
@@ -552,14 +554,13 @@ var QueueOverAllExecute = {};
 /* 执行设置Blockly */
 QueueOverAllExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
 
+    let workspaceXML = QueuePushBlockly.getWorkspaceXML(XMLpath);
+    let initworkspaceXML=QueuePushBlockly.getWorkspaceXML("static/xml/queues/queue_push_init_workspace.xml");
     // 定义Blockly工作空间
-    QueueOverAllBlockly.workspace = QueueOverAllBlockly.initBlockly(blocklyDiv, mediaPath);
+    QueuePushBlockly.workspace = QueuePushBlockly.initBlockly(blocklyDiv, mediaPath,workspaceXML);
 
-    // 通过xml文件路径获取xml对象
-    let workspaceXML = QueueOverAllBlockly.getWorkspaceXML(XMLpath);
-
-    // 定义预定义块
-    Blockly.Xml.domToWorkspace(workspaceXML, QueueOverAllBlockly.workspace);
+    Blockly.Xml.domToWorkspace(initworkspaceXML, QueuePushBlockly.workspace);
+    return QueuePushBlockly.workspace;
 
 }
 

@@ -43,7 +43,7 @@ StackOverAllChart.dataClear = function () {
     StackOverAllChart.showChart = null;
     StackOverAllChart.dataChangeIndex = null;
     StackOverAllChart.stackObjectArr = [];
-    
+
     StackOverAllChart.changeChart = null;   //(函数)图表改变时的执行函数
     StackOverAllChart.stackDataChangeIndex = [-1];  //图表改变时记录变化索引
 }
@@ -53,18 +53,18 @@ StackOverAllChart.getArrInitData = function(codeStr){
     if(codeStr == null || codeStr == undefined || codeStr == ''){
         throw Error("getArrInitData()：获取初始化图表数据失败，Blockly未完全加载！！！");
     }else{
-        let codeList = codeStr.split(";"); 
+        let codeList = codeStr.split(";");
         let arrIndex = -1;
 
         for(let key in codeList){
             arrIndex = codeList[key].indexOf("arr = [");
-        
+
             if(arrIndex != -1){
                 arrIndex = key;
                 break;
             }
         }
-        
+
         if(arrIndex == -1){
             throw Error("getArrInitData()：没有数据！！！");
         }
@@ -72,7 +72,9 @@ StackOverAllChart.getArrInitData = function(codeStr){
 
         let dateList = arr.split("[")[1].split("]")[0].split(",");
         for(let num in dateList){
-            StackOverAllChart.initData.push(parseInt(dateList[num]));
+            if(isNaN(dateList[num])){
+                StackOverAllChart.initData.push(parseInt(dateList[num]));
+            }
         }
 
         ustc_vp.utils.sourceToDest(StackOverAllChart.initData,StackOverAllChart.arrNow);
@@ -82,7 +84,7 @@ StackOverAllChart.getArrInitData = function(codeStr){
 /* 初始化栈图表的数据和属性 */
 StackOverAllChart.initStackDataChart = function (showItem, chartAttr) {
     console.log("initStackChart");
- 
+
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(showItem);
     console.log(chartAttr.chartTitle);
@@ -92,7 +94,7 @@ StackOverAllChart.initStackDataChart = function (showItem, chartAttr) {
         title: {
             text: chartAttr.chartTitle
         },
-        tooltip: {        
+        tooltip: {
             formatter: function (x) {
                 return x.data.name;//设置提示框的内容和格式 节点和边都显示name属性
             }
@@ -148,7 +150,7 @@ StackOverAllChart.setStackChartOption = function (chart, data, dataChangeIndex, 
     chart.setOption({
         title: {
             text: chartAttr.chartTitle,
-            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入栈" : (dataChangeIndex[0] == 2 ? "出栈" : "")), //副标题 
+            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入栈" : (dataChangeIndex[0] == 2 ? "出栈" : "")), //副标题
             subtextStyle: {//主标题的属性
                 color: 'blue',//颜色
                 fontWeight: 'bold',
@@ -190,10 +192,10 @@ StackOverAllChart.setStackChartOption = function (chart, data, dataChangeIndex, 
 }
 
 /* 改变栈图表数据和样式：
-StackOverAllChart.changeChart(StackOverAllBlockly.hasMoreCode, StackOverAllChart.showChart, StackOverAllChart.arrNow, StackOverAllChart.dataChangeIndex); 
+StackOverAllChart.changeChart(StackOverAllBlockly.hasMoreCode, StackOverAllChart.showChart, StackOverAllChart.arrNow, StackOverAllChart.dataChangeIndex);
 */
 StackOverAllChart.stackChangeChart = function (hasMoreCode, chart, data, dataChangeIndex) {
-    
+
     //重新执行或者结束的时候重置数据
     if (!hasMoreCode) {
         for (let i = 0; i < dataChangeIndex.length; i++) {
@@ -202,13 +204,13 @@ StackOverAllChart.stackChangeChart = function (hasMoreCode, chart, data, dataCha
 
         ustc_vp.utils.sourceToDest(StackOverAllChart.initData,data);
     }
-    
+
     //修改容器高度
     StackOverAllTools.stackAttr.seriesHeight =  StackOverAllTools.stackAttr.nodeHeight * (data.length - 1) + 1;
 
     //抽取图标数据
     StackOverAllTools.arrToStackChartDataObjArr(data, StackOverAllChart.stackObjectArr, StackOverAllTools.stackAttr.nodeHeight);
-    
+
     // 在数据改变时设置栈图表
     StackOverAllChart.setStackChartOption(chart, StackOverAllChart.stackObjectArr, dataChangeIndex, StackOverAllTools.setGraphAttr(StackOverAllTools.stackAttr));
 }
@@ -260,7 +262,7 @@ StackOverAllBlockly.dataClear = function () {
     StackOverAllBlockly.latestCode = '';
     StackOverAllBlockly.addCode = '';   // 添加代码字符串
     StackOverAllBlockly.customizeApi = {};
-    
+
     StackOverAllBlockly.algAddCode = null; //(函数)需要不同类型的算法需要添加的API
 }
 /*
@@ -301,24 +303,33 @@ StackOverAllBlockly.getWorkspaceXML = function (XMLpath) {
 }
 
 /* 初始化Blockly块 */
-StackOverAllBlockly.initBlockly = function (blocklyDiv, mediaLocation) {
+StackOverAllBlockly.initBlockly = function (blocklyDiv, mediaLocation,workspaceXML) {
     console.log("initBlockly");
-    
+
     // 基础配置项
     var options = {
-        collapse: true,
-        comments: false,
-        disable: true,
+        toolbox:workspaceXML,
+        // collapse: true,
+        // comments: false,
+        // disable: true,
         maxBlocks: Infinity,
-        trashcan: false,
-        horizontalLayout: false,
+        // trashcan: false,
+        // horizontalLayout: false,
         toolboxPosition: 'start',
         css: true,
         media: mediaLocation,
-        rtl: false,
-        scrollbars: true,
-        sounds: true,
-        oneBasedIndex: true,
+        // rtl: false,
+        // scrollbars: true,
+        // sounds: true,
+        // oneBasedIndex: true,
+        // zoom:
+        //     {controls: true,
+        //         wheel: true,
+        //         startScale: 1.0,
+        //         maxScale: 3,
+        //         minScale: 0.3,
+        //         scaleSpeed: 1.2,
+        //         pinch: true}
     };
     return Blockly.inject(blocklyDiv, options);
 
@@ -365,7 +376,7 @@ StackOverAllBlockly.initInterpretApi = function (interpreter, scope) {
     }
     interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(highlightBlockWrapper));
 
-    for (let key in StackOverAllBlockly.customizeApi) {  
+    for (let key in StackOverAllBlockly.customizeApi) {
         interpreter.setProperty(scope, key.toString(), interpreter.createNativeFunction(StackOverAllBlockly.customizeApi[key][1]));
     }
 }
@@ -375,18 +386,19 @@ StackOverAllBlockly.addApi = function (customizeApi, execFunctionName, execFunct
 }
 /* 生成添加代码字符串 */
 StackOverAllBlockly.generateAddCodeToString = function (customizeApi) {
-    for (let key in customizeApi) {  
+    for (let key in customizeApi) {
         StackOverAllBlockly.addCode += customizeApi[key][0];
     }
 }
 /* 生成并解析代码 */
 StackOverAllBlockly.generateCodeAndLoadIntoInterpreter = function (addCode, workspace) {
-    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode + "alert(arr);\n";
+    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+    Blockly.JavaScript.STATEMENT_SUFFIX = addCode;
     // 确保函数名和变量名不会冲突（自定义的API可加可不加）
     Blockly.JavaScript.addReservedWords('highlightBlock');
     StackOverAllBlockly.latestCode = Blockly.JavaScript.workspaceToCode(workspace);
     StackOverAllBlockly.resetStepUi(true);
-    
+
 }
 
 //=======================================
@@ -489,7 +501,7 @@ StackOverAllTools.getGraphChangeIndex = function (newData, oldData, dataChangeIn
     //如果是入栈
     if(newData.length == oldData.length + 1){
         dataChangeIndex[0] = 1;
-        return true; 
+        return true;
     }else{  //其他情况，dataChangeIndex置零
 
         //出栈
@@ -498,7 +510,7 @@ StackOverAllTools.getGraphChangeIndex = function (newData, oldData, dataChangeIn
         }else{
             dataChangeIndex[0] = -1;
         }
-    
+
         //数据未改变不需要更新图表，返回false
         if (newData.length == oldData.length) {
             let flag = false;
@@ -515,8 +527,8 @@ StackOverAllTools.getGraphChangeIndex = function (newData, oldData, dataChangeIn
         //数据不同时改变图表，返回true
         return true;
     }
-    
-    
+
+
 }
 
 /******************************执行包***********************************/
@@ -524,15 +536,22 @@ var StackOverAllExecute = {};
 
 /* 执行设置Blockly */
 StackOverAllExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
-    
-    // 定义Blockly工作空间
-    StackOverAllBlockly.workspace = StackOverAllBlockly.initBlockly(blocklyDiv, mediaPath);
 
-    // 通过xml文件路径获取xml对象
+    // // 定义Blockly工作空间
+    // StackOverAllBlockly.workspace = StackOverAllBlockly.initBlockly(blocklyDiv, mediaPath);
+    //
+    // // 通过xml文件路径获取xml对象
+    // let workspaceXML = StackOverAllBlockly.getWorkspaceXML(XMLpath);
+    //
+    // // 定义预定义块
+    // Blockly.Xml.domToWorkspace(workspaceXML, StackOverAllBlockly.workspace);
     let workspaceXML = StackOverAllBlockly.getWorkspaceXML(XMLpath);
+    let initworkspaceXML=StackOverAllBlockly.getWorkspaceXML("static/xml/stacks/stack_overall_init_workspace.xml");
+    // 定义Blockly工作空间
+    StackOverAllBlockly.workspace = StackOverAllBlockly.initBlockly(blocklyDiv, mediaPath,workspaceXML);
 
-    // 定义预定义块
-    Blockly.Xml.domToWorkspace(workspaceXML, StackOverAllBlockly.workspace);  
+    Blockly.Xml.domToWorkspace(initworkspaceXML, StackOverAllBlockly.workspace);
+    return StackOverAllBlockly.workspace;
 
 }
 
@@ -540,7 +559,7 @@ StackOverAllExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
 StackOverAllExecute.setOutputArea = function(outputDiv){
 
     //定义结果输出区域
-    StackOverAllBlockly.outputArea = outputDiv;  
+    StackOverAllBlockly.outputArea = outputDiv;
 }
 
 /* 执行设置按钮功能 */
@@ -572,7 +591,7 @@ StackOverAllExecute.setCodeInject = function(){
 
     //生成新代码
     StackOverAllBlockly.generateCodeAndLoadIntoInterpreter(StackOverAllBlockly.addCode, StackOverAllBlockly.workspace);
-    
+
     //工作空间绑定监听事件
     StackOverAllBlockly.workspace.addChangeListener(function (event) {
         if (!(event instanceof Blockly.Events.Ui)) {
@@ -583,7 +602,7 @@ StackOverAllExecute.setCodeInject = function(){
 
 /* 执行设置图表 */
 StackOverAllExecute.setShowChart = function(showDiv){
-    
+
     StackOverAllChart.showChart = StackOverAllChart.initStackChart(showDiv);
     StackOverAllChart.dataChangeIndex = StackOverAllChart.stackDataChangeIndex;
     StackOverAllChart.changeChart = StackOverAllChart.stackChangeChart;

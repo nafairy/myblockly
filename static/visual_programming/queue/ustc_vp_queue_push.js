@@ -384,8 +384,8 @@ QueuePushBlockly.generateAddCodeToString = function (customizeApi) {
 }
 /* 生成并解析代码 */
 QueuePushBlockly.generateCodeAndLoadIntoInterpreter = function (addCode, workspace) {
-    // Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode + "alert(arr);\n";
-    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode + "alert(arr);\n";
+    // Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
     // 确保函数名和变量名不会冲突（自定义的API可加可不加）
     Blockly.JavaScript.addReservedWords('highlightBlock');
     QueuePushBlockly.latestCode = Blockly.JavaScript.workspaceToCode(workspace);
@@ -547,8 +547,11 @@ var QueuePushExecute = {};
 QueuePushExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
 
     let workspaceXML = QueuePushBlockly.getWorkspaceXML(XMLpath);
+    let initworkspaceXML=QueuePushBlockly.getWorkspaceXML("static/xml/queues/queue_push_init_workspace.xml");
     // 定义Blockly工作空间
     QueuePushBlockly.workspace = QueuePushBlockly.initBlockly(blocklyDiv, mediaPath,workspaceXML);
+
+    Blockly.Xml.domToWorkspace(initworkspaceXML, QueuePushBlockly.workspace);
     return QueuePushBlockly.workspace;
     // 通过xml文件路径获取xml对象
     // let workspaceXML = QueuePushBlockly.getWorkspaceXML(XMLpath);

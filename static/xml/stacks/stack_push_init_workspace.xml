@@ -1,0 +1,55 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+    <variables>
+        <variable id=":,r,j(Y5ft9MmjLvQXjv">arr</variable>
+        <variable id="I.QSh|0[:hsjNr;[P|4q">index</variable>
+    </variables>
+    <block type="variables_set" id="I,X|-9rv)c`g9/2RqkLK" x="62" y="138">
+        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+        <value name="VALUE">
+            <block type="stacks_create_empty" id=")0_;c3SK/m`O)ey5i!q("></block>
+        </value>
+        <next>
+<!--            <block type="controls_for" id="d7IaQc^I.wzy^4|X9rEN">-->
+<!--                <field name="VAR" id="I.QSh|0[:hsjNr;[P|4q">index</field>-->
+<!--                <value name="FROM">-->
+<!--                    <block type="math_number" id="B^,i:)Rf:DA1+ecrPgdx">-->
+<!--                        <field name="NUM">0</field>-->
+<!--                    </block>-->
+<!--                </value>-->
+<!--                <value name="TO">-->
+<!--                    <block type="math_number" id="Mh?AXz4Z8pJK^k#KB$LP">-->
+<!--                        <field name="NUM">8</field>-->
+<!--                    </block>-->
+<!--                </value>-->
+<!--                <value name="BY">-->
+<!--                    <block type="math_number" id="{5wxW?-tng)N,qHrrPe*">-->
+<!--                        <field name="NUM">1</field>-->
+<!--                    </block>-->
+<!--                </value>-->
+<!--                <statement name="DO">-->
+<!--                    <block type="stacks_push" id="kl`CF~jly$phGhqBIrGy">-->
+<!--                        <value name="VALUE">-->
+<!--                            <block type="variables_get" id="o7xri-y#pS8:;!hwiH,^">-->
+<!--                                <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>-->
+<!--                            </block>-->
+<!--                        </value>-->
+<!--                        <value name="TO">-->
+<!--                            <block type="math_random_int" id="kiV:Pxtv`m2GD|!Q]CG?">-->
+<!--                                <value name="FROM">-->
+<!--                                    <block type="math_number" id="tj|Z7F[X=8[RTmp?wkg[">-->
+<!--                                        <field name="NUM">1</field>-->
+<!--                                    </block>-->
+<!--                                </value>-->
+<!--                                <value name="TO">-->
+<!--                                    <block type="math_number" id="~;z7oG[+mh5rLq~d!F6]">-->
+<!--                                        <field name="NUM">100</field>-->
+<!--                                    </block>-->
+<!--                                </value>-->
+<!--                            </block>-->
+<!--                        </value>-->
+<!--                    </block>-->
+<!--                </statement>-->
+<!--            </block>-->
+        </next>
+    </block>
+</xml>

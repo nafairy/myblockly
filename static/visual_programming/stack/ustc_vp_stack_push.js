@@ -43,7 +43,7 @@ StackPushChart.dataClear = function () {
     StackPushChart.showChart = null;
     StackPushChart.dataChangeIndex = null;
     StackPushChart.stackObjectArr = [];
-    
+
     StackPushChart.changeChart = null;   //(函数)图表改变时的执行函数
     StackPushChart.stackDataChangeIndex = [-1];  //图表改变时记录变化索引
 }
@@ -53,18 +53,18 @@ StackPushChart.getArrInitData = function(codeStr){
     if(codeStr == null || codeStr == undefined || codeStr == ''){
         throw Error("getArrInitData()：获取初始化图表数据失败，Blockly未完全加载！！！");
     }else{
-        let codeList = codeStr.split(";"); 
+        let codeList = codeStr.split(";");
         let arrIndex = -1;
 
         for(let key in codeList){
             arrIndex = codeList[key].indexOf("arr = [");
-        
+
             if(arrIndex != -1){
                 arrIndex = key;
                 break;
             }
         }
-        
+
         if(arrIndex == -1){
             throw Error("getArrInitData()：没有数据！！！");
         }
@@ -84,7 +84,7 @@ StackPushChart.getArrInitData = function(codeStr){
 /* 初始化栈图表的数据和属性 */
 StackPushChart.initStackDataChart = function (showItem, chartAttr) {
     console.log("initStackChart");
- 
+
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(showItem);
     console.log(chartAttr.chartTitle);
@@ -94,7 +94,7 @@ StackPushChart.initStackDataChart = function (showItem, chartAttr) {
         title: {
             text: chartAttr.chartTitle
         },
-        tooltip: {        
+        tooltip: {
             formatter: function (x) {
                 return x.data.name;//设置提示框的内容和格式 节点和边都显示name属性
             }
@@ -150,7 +150,7 @@ StackPushChart.setStackChartOption = function (chart, data, dataChangeIndex, cha
     chart.setOption({
         title: {
             text: chartAttr.chartTitle,
-            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入栈" : (dataChangeIndex[0] == 2 ? "出栈" : "")), //副标题 
+            subtext: "当前操作：" + (dataChangeIndex[0] == 1 ? "入栈" : (dataChangeIndex[0] == 2 ? "出栈" : "")), //副标题
             subtextStyle: {//主标题的属性
                 color: 'blue',//颜色
                 fontWeight: 'bold',
@@ -192,10 +192,10 @@ StackPushChart.setStackChartOption = function (chart, data, dataChangeIndex, cha
 }
 
 /* 改变栈图表数据和样式：
-StackPushChart.changeChart(StackPushBlockly.hasMoreCode, StackPushChart.showChart, StackPushChart.arrNow, StackPushChart.dataChangeIndex); 
+StackPushChart.changeChart(StackPushBlockly.hasMoreCode, StackPushChart.showChart, StackPushChart.arrNow, StackPushChart.dataChangeIndex);
 */
 StackPushChart.stackChangeChart = function (hasMoreCode, chart, data, dataChangeIndex) {
-    
+
     //重新执行或者结束的时候重置数据
     if (!hasMoreCode) {
         for (let i = 0; i < dataChangeIndex.length; i++) {
@@ -204,13 +204,13 @@ StackPushChart.stackChangeChart = function (hasMoreCode, chart, data, dataChange
 
         ustc_vp.utils.sourceToDest(StackPushChart.initData,data);
     }
-    
+
     //修改容器高度
     StackPushTools.stackAttr.seriesHeight =  StackPushTools.stackAttr.nodeHeight * (data.length - 1) + 1;
 
     //抽取图标数据
     StackPushTools.arrToStackChartDataObjArr(data, StackPushChart.stackObjectArr, StackPushTools.stackAttr.nodeHeight);
-    
+
     // 在数据改变时设置栈图表
     StackPushChart.setStackChartOption(chart, StackPushChart.stackObjectArr, dataChangeIndex, StackPushTools.setGraphAttr(StackPushTools.stackAttr));
 }
@@ -262,7 +262,7 @@ StackPushBlockly.dataClear = function () {
     StackPushBlockly.latestCode = '';
     StackPushBlockly.addCode = '';   // 添加代码字符串
     StackPushBlockly.customizeApi = {};
-    
+
     StackPushBlockly.algAddCode = null; //(函数)需要不同类型的算法需要添加的API
 }
 /*
@@ -303,24 +303,33 @@ StackPushBlockly.getWorkspaceXML = function (XMLpath) {
 }
 
 /* 初始化Blockly块 */
-StackPushBlockly.initBlockly = function (blocklyDiv, mediaLocation) {
+StackPushBlockly.initBlockly = function (blocklyDiv, mediaLocation,workspaceXML) {
     console.log("initBlockly");
-    
+
     // 基础配置项
     var options = {
-        collapse: true,
-        comments: false,
-        disable: true,
+        toolbox:workspaceXML,
+        // collapse: true,
+        // comments: false,
+        // disable: true,
         maxBlocks: Infinity,
-        trashcan: false,
-        horizontalLayout: false,
+        // trashcan: false,
+        // horizontalLayout: false,
         toolboxPosition: 'start',
         css: true,
         media: mediaLocation,
-        rtl: false,
-        scrollbars: true,
-        sounds: true,
-        oneBasedIndex: true,
+        // rtl: false,
+        // scrollbars: true,
+        // sounds: true,
+        // oneBasedIndex: true,
+        // zoom:
+        //     {controls: true,
+        //         wheel: true,
+        //         startScale: 1.0,
+        //         maxScale: 3,
+        //         minScale: 0.3,
+        //         scaleSpeed: 1.2,
+        //         pinch: true}
     };
     return Blockly.inject(blocklyDiv, options);
 
@@ -367,7 +376,7 @@ StackPushBlockly.initInterpretApi = function (interpreter, scope) {
     }
     interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(highlightBlockWrapper));
 
-    for (let key in StackPushBlockly.customizeApi) {  
+    for (let key in StackPushBlockly.customizeApi) {
         interpreter.setProperty(scope, key.toString(), interpreter.createNativeFunction(StackPushBlockly.customizeApi[key][1]));
     }
 }
@@ -377,18 +386,20 @@ StackPushBlockly.addApi = function (customizeApi, execFunctionName, execFunction
 }
 /* 生成添加代码字符串 */
 StackPushBlockly.generateAddCodeToString = function (customizeApi) {
-    for (let key in customizeApi) {  
+    for (let key in customizeApi) {
         StackPushBlockly.addCode += customizeApi[key][0];
     }
 }
 /* 生成并解析代码 */
 StackPushBlockly.generateCodeAndLoadIntoInterpreter = function (addCode, workspace) {
-    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode + "alert(arr);\n";
+    Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+    Blockly.JavaScript.STATEMENT_SUFFIX = addCode;
+    // Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n' + addCode;
     // 确保函数名和变量名不会冲突（自定义的API可加可不加）
     Blockly.JavaScript.addReservedWords('highlightBlock');
     StackPushBlockly.latestCode = Blockly.JavaScript.workspaceToCode(workspace);
     StackPushBlockly.resetStepUi(true);
-    
+
 }
 
 //=======================================
@@ -491,7 +502,7 @@ StackPushTools.getGraphChangeIndex = function (newData, oldData, dataChangeIndex
     //如果是入栈
     if(newData.length == oldData.length + 1){
         dataChangeIndex[0] = 1;
-        return true; 
+        return true;
     }else{  //其他情况，dataChangeIndex置零
 
         //出栈
@@ -500,7 +511,7 @@ StackPushTools.getGraphChangeIndex = function (newData, oldData, dataChangeIndex
         }else{
             dataChangeIndex[0] = -1;
         }
-    
+
         //数据未改变不需要更新图表，返回false
         if (newData.length == oldData.length) {
             let flag = false;
@@ -517,8 +528,8 @@ StackPushTools.getGraphChangeIndex = function (newData, oldData, dataChangeIndex
         //数据不同时改变图表，返回true
         return true;
     }
-    
-    
+
+
 }
 
 /******************************执行包***********************************/
@@ -526,15 +537,16 @@ var StackPushExecute = {};
 
 /* 执行设置Blockly */
 StackPushExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
-    
-    // 定义Blockly工作空间
-    StackPushBlockly.workspace = StackPushBlockly.initBlockly(blocklyDiv, mediaPath);
 
     // 通过xml文件路径获取xml对象
     let workspaceXML = StackPushBlockly.getWorkspaceXML(XMLpath);
+    let initworkspaceXML=StackPopBlockly.getWorkspaceXML("static/xml/stacks/stack_push_init_workspace.xml");
+    // 定义Blockly工作空间
+    StackPushBlockly.workspace = StackPushBlockly.initBlockly(blocklyDiv, mediaPath,workspaceXML);
 
     // 定义预定义块
-    Blockly.Xml.domToWorkspace(workspaceXML, StackPushBlockly.workspace);  
+    Blockly.Xml.domToWorkspace(initworkspaceXML, StackPushBlockly.workspace);
+    return StackPushBlockly.workspace;
 
 }
 
@@ -542,7 +554,7 @@ StackPushExecute.setBlockly = function (blocklyDiv, mediaPath, XMLpath) {
 StackPushExecute.setOutputArea = function(outputDiv){
 
     //定义结果输出区域
-    StackPushBlockly.outputArea = outputDiv;  
+    StackPushBlockly.outputArea = outputDiv;
 }
 
 /* 执行设置按钮功能 */
@@ -574,7 +586,7 @@ StackPushExecute.setCodeInject = function(){
 
     //生成新代码
     StackPushBlockly.generateCodeAndLoadIntoInterpreter(StackPushBlockly.addCode, StackPushBlockly.workspace);
-    
+
     //工作空间绑定监听事件
     StackPushBlockly.workspace.addChangeListener(function (event) {
         if (!(event instanceof Blockly.Events.Ui)) {
@@ -585,7 +597,7 @@ StackPushExecute.setCodeInject = function(){
 
 /* 执行设置图表 */
 StackPushExecute.setShowChart = function(showDiv){
-    
+
     StackPushChart.showChart = StackPushChart.initStackChart(showDiv);
     StackPushChart.dataChangeIndex = StackPushChart.stackDataChangeIndex;
     StackPushChart.changeChart = StackPushChart.stackChangeChart;

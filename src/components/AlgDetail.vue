@@ -340,7 +340,7 @@
             <button id="overButton" class="btn" @click="isActive=0">结束</button>
           </div>
           <!-- 展示栏-->
-          <div id="showBar" style="height: 450px">
+          <div id="showBar" style="height: 600px">
             动态展示块
           </div>
         </el-col>
