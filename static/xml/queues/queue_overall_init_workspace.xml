@@ -1,0 +1,14 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+    <variables>
+        <variable id=":,r,j(Y5ft9MmjLvQXjv">arr</variable>
+    </variables>
+    <block type="variables_set" id="n5VX%$_.)5ig$WzL2o#r" collapsed="true" x="1" y="10">
+        <field name="VAR" id=":,r,j(Y5ft9MmjLvQXjv">arr</field>
+        <value name="VALUE">
+            <block type="queues_create_empty" id="9Ab1j3nSTy,$D`4(O6v2"></block>
+        </value>
+        <next>
+
+        </next>
+    </block>
+</xml>

@@ -1,0 +1,99 @@
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id=";2wc`PZzC2mli(nYe_*U">arr</variable>
+        <variable id="G2%S3wSW];+:#j={5TaQ">arr_len</variable>
+        <variable id="P_9n#4O6(+@I[aZ)7Z(u">flag</variable>
+        <variable id="ny,j^sI)kYq=(I@O3,-,">indexnow</variable>
+        <variable id=":ssd+MJaE;jcxs4#Of~w">indexnext</variable>
+        <variable id="i`xGHe)!G$`|+C;/5F/?">temp1</variable>
+        <variable id="8UNjsR?f|TP-VUP$pF=U">temp2</variable>
+    </variables>
+    <block type="variables_set" id="V~#abn~]ih4A1+,JZ-ko" collapsed="true" deletable="false" movable="false" x="1" y="10">
+        <field name="VAR" id=";2wc`PZzC2mli(nYe_*U">arr</field>
+        <value name="VALUE">
+            <block type="lists_create_with" id="8a,~M!72~:.=i)?]Ktmk" deletable="false" movable="false">
+                <mutation items="15"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="VGNNy8SZ-D:nx+wP:e+?" deletable="false" movable="false">
+                        <field name="NUM">100</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="l4vLTKc#R9Ga7yl!.DN." deletable="false" movable="false">
+                        <field name="NUM">44</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="%A^N$ZQeE:s.%!L+4wp=" deletable="false" movable="false">
+                        <field name="NUM">38</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="Cacb[=G*qqIqG$`yr2bc" deletable="false" movable="false">
+                        <field name="NUM">5</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="*Zu80I_dKkCQ2`.Rq]6{" deletable="false" movable="false">
+                        <field name="NUM">47</field>
+                    </block>
+                </value>
+                <value name="ADD5">
+                    <block type="math_number" id="i(MDwB1]R2S[%81*H+sT" deletable="false" movable="false">
+                        <field name="NUM">15</field>
+                    </block>
+                </value>
+                <value name="ADD6">
+                    <block type="math_number" id="5uN54aTR]Df+Hw[3]y+9" deletable="false" movable="false">
+                        <field name="NUM">36</field>
+                    </block>
+                </value>
+                <value name="ADD7">
+                    <block type="math_number" id="*t=s5J}/xm!y:S{ALDnu" deletable="false" movable="false">
+                        <field name="NUM">26</field>
+                    </block>
+                </value>
+                <value name="ADD8">
+                    <block type="math_number" id="rHdr,Z|3(;Vh|ZMrcySD" deletable="false" movable="false">
+                        <field name="NUM">27</field>
+                    </block>
+                </value>
+                <value name="ADD9">
+                    <block type="math_number" id=";5ee*27p~VVpq^@`^$Rm" deletable="false" movable="false">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
+                <value name="ADD10">
+                    <block type="math_number" id="C;IpsAZEdTyhb2T*XoNd" deletable="false" movable="false">
+                        <field name="NUM">46</field>
+                    </block>
+                </value>
+                <value name="ADD11">
+                    <block type="math_number" id="%k9)F)0*Ju(.pT3Aq#{c" deletable="false" movable="false">
+                        <field name="NUM">4</field>
+                    </block>
+                </value>
+                <value name="ADD12">
+                    <block type="math_number" id="7paL0};+1/vOGs,$H-[M" deletable="false" movable="false">
+                        <field name="NUM">19</field>
+                    </block>
+                </value>
+                <value name="ADD13">
+                    <block type="math_number" id="`(N1l#iM;2W01)f5auTX" deletable="false" movable="false">
+                        <field name="NUM">50</field>
+                    </block>
+                </value>
+                <value name="ADD14">
+                    <block type="math_number" id="Y%.!8_WP1S}[^Gax@DEV" deletable="false" movable="false">
+                        <field name="NUM">48</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+
+        </next>
+    </block>
+
+</xml>

@@ -1,0 +1,107 @@
+/**
+ *
+ *
+ * @type {Map<any, any>}
+ */
+
+
+let algMap = new Map();
+algMap.set("arrayInsertAlg",{
+  obj:ArrayInsertExecute,
+  xml:"static/xml/arrays/array_insert_workspace.xml",
+  a_name:"数组插入"
+});
+algMap.set("arrayDeleteAlg",{
+  obj:ArrayDeleteExecute,
+  xml:"static/xml/arrays/array_delete_workspace.xml",
+  a_name:"数组删除"
+});
+algMap.set("bubbleSortAlg",{
+  obj:BubbleSortExecute,
+  xml:"static/xml/arrays/bubble_sort_workspace.xml",
+  a_name:"冒泡排序"
+});
+algMap.set("selectSortAlg",{
+  obj:SelectSortExecute,
+  xml:"static/xml/arrays/select_sort_workspace.xml",
+  a_name:"选择排序"
+});
+algMap.set("quickSortAlg",{
+  obj:QuickSortExecute,
+  xml:"static/xml/arrays/quick_sort_workspace.xml",
+  a_name:"快速排序"
+});
+algMap.set("insertSortAlg",{
+  obj:InsertSortExecute,
+  xml:"static/xml/arrays/insert_sort_workspace.xml",
+  a_name:"插入排序"
+});
+algMap.set("stackPushAlg",{
+  obj:StackPushExecute,
+  xml:"static/xml/stacks/stack_push_workspace.xml",
+  a_name:"入栈"
+});
+algMap.set("stackPopAlg",{
+  obj:StackPopExecute,
+  xml:"static/xml/stacks/stack_pop_workspace.xml",
+  a_name:"出栈"
+});
+algMap.set("stackOverAllAlg",{
+  obj:StackOverAllExecute,
+  xml:"static/xml/stacks/stack_overall_workspace.xml",
+  a_name:"栈综合"
+});
+algMap.set("queueOverAllAlg",{
+  obj:QueueOverAllExecute,
+  xml:"static/xml/queues/queue_overall_workspace.xml",
+  a_name:"队列综合"
+});
+algMap.set("queuePushAlg",{
+  obj:QueuePushExecute,
+  xml:"static/xml/queues/queue_push_workspace.xml",
+  a_name:"入队"
+});
+algMap.set("queuePopAlg",{
+  obj:QueuePopExecute,
+  xml:"static/xml/queues/queue_pop_workspace.xml",
+  a_name:"出队"
+});
+algMap.set("linklistDeleteAlg",{
+  obj:LinkListDeleteExecute,
+  xml:"static/xml/linklists/linklist_delete_workspace.xml",
+  a_name:"链表删除"
+});
+algMap.set("linklistSearchAlg",{
+  obj:LinkListSearchExecute,
+  xml:"static/xml/linklists/linklist_search_workspace.xml",
+  a_name:"链表查询"
+});
+algMap.set("linklistInsertAlg",{
+  obj:LinkListInsertExecute,
+  xml:"static/xml/linklists/linklist_insert_workspace.xml",
+  a_name:"链表插入"
+});
+algMap.set("treeBfsAlg",{
+  obj:TreeBfsExecute,
+  xml:"static/xml/trees/tree_bfs_workspace.xml",
+  a_name:"广度优先"
+});
+algMap.set("treeInOrderAlg",{
+  obj:TreeInorderExecute,
+  xml:"static/xml/trees/tree_inorder_workspace.xml",
+  a_name:"中序遍历"
+});
+algMap.set("treePreOrderAlg",{
+  obj:TreePreorderExecute,
+  xml:"static/xml/trees/tree_preorder_workspace.xml",
+  a_name:"前序遍历"
+});
+algMap.set("treePosOrderAlg",{
+  obj:TreePosorderExecute,
+  xml:"static/xml/trees/tree_posorder_workspace.xml",
+  a_name:"后序遍历"
+});
+
+export {
+  algMap
+}

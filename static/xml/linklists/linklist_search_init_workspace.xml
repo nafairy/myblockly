@@ -1,0 +1,50 @@
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id="G,z`oc}bwSy+veFoOO*j">linklist</variable>
+        <variable id="=ZB}0_T2+s.:.^P:Z(WM">val</variable>
+        <variable id="B=7@[+]ktaS`3q``D|)$">curr</variable>
+        <variable id="=`;xsQ+%z3~H_)qmBu1Z">index</variable>
+    </variables>
+    <block type="variables_set" id="PvK#UuP`i$IS@^;FT:gb" collapsed="true" x="1" y="10">
+        <field name="VAR" id="G,z`oc}bwSy+veFoOO*j">linklist</field>
+        <value name="VALUE">
+            <block type="linkLists_create_with" id="]bT|1c!9f(oa7nVUaGv9">
+                <mutation items="6"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="OiNkKiYkd1:u*+PR[.h~">
+                        <field name="NUM">3</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="e.PFzutB/K#K:^26a4*c">
+                        <field name="NUM">4</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="}+Q4SN@*3vZ6I!/`6.uE">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="I:_~u9q[$e82b)[y-A;+">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="w5a|EHsbgl;dC.O}{L,*">
+                        <field name="NUM">7</field>
+                    </block>
+                </value>
+                <value name="ADD5">
+                    <block type="math_number" id="|70?%KO%I_qrsb^wO*hh">
+                        <field name="NUM">9</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+
+        </next>
+    </block>
+</xml>

@@ -515,7 +515,7 @@ export default {
       xmlPath = alg.xml;
       console.log(alg);
       // 3. 对动态工作空间进行初试化
-      this.workspace=ustc_vp.Execute.setBlockly(blocklyDiv, 'static/media', xmlPath);
+      ustc_vp.Execute.setBlockly(blocklyDiv, 'static/media', xmlPath);
       ustc_vp.Execute.setOutputArea(outputArea);
       ustc_vp.Execute.setButton(runButton, stopButton, continueButton, overButton);
       ustc_vp.Execute.setShowCodeArea(showCodeArea);

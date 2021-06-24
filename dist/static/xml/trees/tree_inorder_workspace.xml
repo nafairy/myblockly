@@ -1,0 +1,209 @@
+<!-- 2.定义xml文件 -->
+<!-- 预定义区域 -->
+<xml xmlns="https://developers.google.com/blockly/xml" id="predefinedWorkspaces" style="display: none">
+    <variables>
+        <variable id="v%cGo*N^]6ls`%Jj`pyd">root</variable>
+        <variable id="Qk6DNca{Uf|p=;R$/4I0">list</variable>
+        <variable id="gA{5rlejR1/XdXy4$$nd">stack</variable>
+        <variable id="!eAyE(a~iNAo8rtlKm8;">tmp</variable>
+        <variable id="I~7(:(xko3}h0GT~eIj]">curr</variable>
+    </variables>
+    <block type="variables_set" id="uHad-sKHYaR,ne,TLo-?" collapsed="true" x="1" y="10">
+        <field name="VAR" id="v%cGo*N^]6ls`%Jj`pyd">root</field>
+        <value name="VALUE">
+            <block type="binary_tree_create_with" id="%OA(X`65Tqa(1.;P8`%h">
+                <mutation items="6"></mutation>
+                <value name="ADD0">
+                    <block type="math_number" id="P~e#C_C000%uGUeP.ah9">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+                <value name="ADD1">
+                    <block type="math_number" id="aISgVl(gc+$ws$$#cPwY">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
+                <value name="ADD2">
+                    <block type="math_number" id="=Hizmf,he{1LxXQ5N6/N">
+                        <field name="NUM">3</field>
+                    </block>
+                </value>
+                <value name="ADD3">
+                    <block type="math_number" id="O!Cne/G$t(1a@/Pz=a!y">
+                        <field name="NUM">4</field>
+                    </block>
+                </value>
+                <value name="ADD4">
+                    <block type="math_number" id="(U]pW|`LV|_@}}W1$Jq@">
+                        <field name="NUM">5</field>
+                    </block>
+                </value>
+                <value name="ADD5">
+                    <block type="math_number" id="(2g_AlVF}p4jWK09Ww%=">
+                        <field name="NUM">6</field>
+                    </block>
+                </value>
+            </block>
+        </value>
+        <next>
+            <block type="variables_set" id="Z:Tg0#|Gm%,BJl8oK@]7">
+                <field name="VAR" id="Qk6DNca{Uf|p=;R$/4I0">list</field>
+                <value name="VALUE">
+                    <block type="lists_create_with" id="-50i;-=e}8tB*y(~WEyc">
+                        <mutation items="0"></mutation>
+                    </block>
+                </value>
+                <next>
+                    <block type="variables_set" id="{5yw0oonmKSB)D6N?|~X">
+                        <field name="VAR" id="gA{5rlejR1/XdXy4$$nd">stack</field>
+                        <value name="VALUE">
+                            <block type="stacks_create_empty" id="~5Hm.j`dS7%Pogqgn!1D"></block>
+                        </value>
+                        <next>
+                            <block type="variables_set" id="WDK(W,EbZo6?ct*n84NC">
+                                <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                <value name="VALUE">
+                                    <block type="variables_get" id="Bz6+fyDNN8/iZdbc6_mT">
+                                        <field name="VAR" id="v%cGo*N^]6ls`%Jj`pyd">root</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="controls_whileUntil" id="TJKl,)b31^Q9(ix.UjiM">
+                                        <field name="MODE">WHILE</field>
+                                        <value name="BOOL">
+                                            <block type="logic_boolean" id="HY#8$@@}JciTknA1P$xQ">
+                                                <field name="BOOL">TRUE</field>
+                                            </block>
+                                        </value>
+                                        <statement name="DO">
+                                            <block type="controls_whileUntil" id=";/j^hX!}D`4[CSe[#`2q">
+                                                <field name="MODE">WHILE</field>
+                                                <value name="BOOL">
+                                                    <block type="logic_compare" id="=z^]]WdL/=-E}L%gJCV7">
+                                                        <field name="OP">NEQ</field>
+                                                        <value name="A">
+                                                            <block type="variables_get" id="m13Q!v5?f2UQCMt~soG5">
+                                                                <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="B">
+                                                            <block type="logic_null" id="wWL.D0=_tAS{slfq_GVz"></block>
+                                                        </value>
+                                                    </block>
+                                                </value>
+                                                <statement name="DO">
+                                                    <block type="stacks_push" id="xrip9Obu2|*Q{$WRpb{`">
+                                                        <value name="VALUE">
+                                                            <block type="variables_get" id="j{upDvQ`zrTl^YrhlIQB">
+                                                                <field name="VAR" id="gA{5rlejR1/XdXy4$$nd">stack</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="TO">
+                                                            <block type="variables_get" id="CU486$|)zl`oYoFF=g-G">
+                                                                <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                                            </block>
+                                                        </value>
+                                                        <next>
+                                                            <block type="variables_set" id="Nrx;|,B$5]?;jdhSv4u|">
+                                                                <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                                                <value name="VALUE">
+                                                                    <block type="trees_node_getLeft" id="e3..m.;wvs(6td3AG|(n">
+                                                                        <value name="NODE">
+                                                                            <block type="variables_get" id="sY^^KVOQa-c#E!p{k$^|">
+                                                                                <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </statement>
+                                                <next>
+                                                    <block type="controls_if" id="ay,HsZz5/0_Qg(Vug9I^">
+                                                        <value name="IF0">
+                                                            <block type="stacks_isEmpty" id=":,m-VH]M=vC^1m)(f2@x">
+                                                                <value name="VALUE">
+                                                                    <block type="variables_get" id="/wA}c@0GsV/!Oi)M@_AC">
+                                                                        <field name="VAR" id="gA{5rlejR1/XdXy4$$nd">stack</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                            <block type="controls_flow_statements" id=";M8Y$QlQR`oNN%[}u+QC">
+                                                                <field name="FLOW">BREAK</field>
+                                                            </block>
+                                                        </statement>
+                                                        <next>
+                                                            <block type="variables_set" id="O|y*)D)vgs}C9FJ$i*B[">
+                                                                <field name="VAR" id="I~7(:(xko3}h0GT~eIj]">curr</field>
+                                                                <value name="VALUE">
+                                                                    <block type="stacks_top" id="M|`DMzii+)+z;%/:Lj%-">
+                                                                        <value name="VALUE">
+                                                                            <block type="variables_get" id="=@-{60%L3l?jev4otzJW">
+                                                                                <field name="VAR" id="gA{5rlejR1/XdXy4$$nd">stack</field>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                                <next>
+                                                                    <block type="stacks_pop" id="H}v4GLrj}ex*IAvZe.}F">
+                                                                        <value name="VALUE">
+                                                                            <block type="variables_get" id="muaHC/8~+hKpNUKP2[:^">
+                                                                                <field name="VAR" id="gA{5rlejR1/XdXy4$$nd">stack</field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <next>
+                                                                            <block type="lists_setIndex" id="`Cy@wX#a1)*:im@V0$!H">
+                                                                                <mutation at="false"></mutation>
+                                                                                <field name="MODE">INSERT</field>
+                                                                                <field name="WHERE">LAST</field>
+                                                                                <value name="LIST">
+                                                                                    <block type="variables_get" id="F3+;TZm:^S_.Hi~#_wwq">
+                                                                                        <field name="VAR" id="Qk6DNca{Uf|p=;R$/4I0">list</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <value name="TO">
+                                                                                    <block type="trees_node_getVal" id="CnB5{HI/ueJOL*6qQxG/">
+                                                                                        <value name="NODE">
+                                                                                            <block type="variables_get" id="wNpEi[D^jSSn$aGdrx~/">
+                                                                                                <field name="VAR" id="I~7(:(xko3}h0GT~eIj]">curr</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                    <block type="variables_set" id="^#z-=o%?|ALhxu*bv,fI">
+                                                                                        <field name="VAR" id="!eAyE(a~iNAo8rtlKm8;">tmp</field>
+                                                                                        <value name="VALUE">
+                                                                                            <block type="trees_node_getRight" id=":xPf(|8MxP$K!-Q$h)p[">
+                                                                                                <value name="NODE">
+                                                                                                    <block type="variables_get" id="*vVVx:B{/%@^bt(32_]W">
+                                                                                                        <field name="VAR" id="I~7(:(xko3}h0GT~eIj]">curr</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </next>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </next>
+                                                            </block>
+                                                        </next>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </statement>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

@@ -79,7 +79,7 @@
                 name: 'arrayInsertAlg',
                 imgUrl: require('../../assets/c1.gif'),
                 createdTime: '2020.1.30',
-                title: "数组插入"
+                title: "还书"
               },
               {
                 id: 2,
@@ -87,7 +87,7 @@
                 name: 'arrayDeleteAlg',
                 imgUrl: require('../../assets/c2.gif'),
                 createdTime: '2020.1.30',
-                title: "数组删除"
+                title: "抽纸牌"
               },
               {
                 id: 3,
@@ -165,7 +165,7 @@
                 difficulty: "easy",
                 imgUrl: require('../../assets/c10.gif'),
                 createdTime: '2020.1.30',
-                title: "入队"
+                title: "管道Ⅰ"
               },
               {
                 id: 2,
@@ -173,7 +173,7 @@
                 difficulty: "easy",
                 imgUrl: require('../../assets/c11.gif'),
                 createdTime: '2020.1.31',
-                title: "出队"
+                title: "管道Ⅱ"
               },
               {
                 id: 3,
@@ -181,7 +181,7 @@
                 difficulty: "medium",
                 imgUrl: require('../../assets/c12.gif'),
                 createdTime: '2020.1.32',
-                title: '队列综合算法'
+                title: '管道Ⅲ'
               }
             ]
           },
@@ -196,7 +196,7 @@
                 difficulty: "easy",
                 imgUrl: require('../../assets/c15.gif'),
                 createdTime: '2020.1.32',
-                title: '链表查询'
+                title: '查找车厢'
 
               },
               {
@@ -205,7 +205,7 @@
                 difficulty: "hard",
                 imgUrl: require('../../assets/c14.gif'),
                 createdTime: '2020.1.31',
-                title: "链表删除"
+                title: "拆除车厢"
               },
               {
                 id: 3,
@@ -213,7 +213,7 @@
                 difficulty: "hard",
                 imgUrl: require('../../assets/c13.gif'),
                 createdTime: '2020.1.30',
-                title: "链表插入"
+                title: "改变RNA"
 
               }
             ]
